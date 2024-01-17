@@ -25,6 +25,13 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.nav-name{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.nav-name span{
+    color: #ff004f;
+}
 .logo{
     width: 140px;
 }
