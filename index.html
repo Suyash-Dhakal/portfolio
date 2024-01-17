@@ -35,11 +35,52 @@
                     <img src="images/Suyash2.jpeg" >
                   </div>
                   <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veritatis eos totam omnis perferendis! Repellat ullam quaerat nam, aliquam pariatur beatae modi molestiae sequi animi suscipit maiores ipsum voluptas nesciunt!
+                    Eum sit, perferendis ipsam illum, iste vitae eaque deserunt molestias minus corporis pariatur enim commodi? Ad nostrum tempora alias eligendi nihil. Officia rerum quos ipsam excepturi veniam minima quis quibusdam.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <!-- <p class="tab-links" onclick="openTab('experience')">Experience</p> -->
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                            <li><span>Web Development</span><br>Front-end web development</li>
+                        </ul>
+                    </div>
+                    <!-- the following part is for EXPERIENCE ! -->
+                    <!-- <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span></span><br></li>
+                            <li><span></span><br></li>
+                        </ul>
+                    </div> -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Present</span><br>Bachelors of Science in Computer Science and Information Technology</li>
+                        </ul>
+                    </div>
                   </div>          
             </div>
         </div>
     </div>
     
+    <script>
+        var tabLinks=document.getElementsByClassName("tab-links");
+        var tabContents=document.getElementsByClassName("tab-contents");
+        function openTab(tabName){
+            for (tabLink  of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (tabContent  of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+            
+        }
+    </script>
 </body>
 </html>
